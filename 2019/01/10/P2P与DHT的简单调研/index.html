@@ -108,23 +108,30 @@
 
 
 
-  <meta name="description" content="认识世界，认识自己，变更强。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Liang Peili&#39;s Blog">
-<meta property="og:url" content="http://liangnotes.com/archives/2018/index.html">
+  <meta name="description" content="P2P 与 DHT 的简单调研一、什么是哈希表？哈希表（也叫散列表）是用来存储键值对的一种容器，英文为‘key/value pairs’。它的特点是可以放标快速的根据键(key)来获取值(value)。现实中的一个例子就是手机通信录，你可以根据某个人的名字查询到他的号码。 存储 value 的单元叫做桶(bucket)或者槽(slot)。在一个哈希表中，会包含N个桶，N通常是固定不变的。每个桶都有">
+<meta name="keywords" content="区块链">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P2P与DHT的简单调研">
+<meta property="og:url" content="http://liangnotes.com/2019/01/10/P2P与DHT的简单调研/index.html">
 <meta property="og:site_name" content="Liang Peili&#39;s Blog">
-<meta property="og:description" content="认识世界，认识自己，变更强。">
+<meta property="og:description" content="P2P 与 DHT 的简单调研一、什么是哈希表？哈希表（也叫散列表）是用来存储键值对的一种容器，英文为‘key/value pairs’。它的特点是可以放标快速的根据键(key)来获取值(value)。现实中的一个例子就是手机通信录，你可以根据某个人的名字查询到他的号码。 存储 value 的单元叫做桶(bucket)或者槽(slot)。在一个哈希表中，会包含N个桶，N通常是固定不变的。每个桶都有">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg/630px-Hash_table_3_1_1_0_1_0_0_SP.svg.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg/900px-Hash_table_5_0_1_1_1_1_1_LL.svg.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DHT_en.svg/1000px-DHT_en.svg.png">
+<meta property="og:image" content="https://lh6.googleusercontent.com/trmBi0r-sOJY0WJ0TjmXaCYgo602BxNc7D5LAA1kSSByWBWMJF2DOBP64XWMe_DDV8WVUvqTSxibnPvpAKJ5oIxMAHeY3gPahp9s2BRNXUDceQzmwrjk0aWEvvx-X6z1iauTFo1X32o">
+<meta property="og:updated_time" content="2019-01-10T10:09:17.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liang Peili&#39;s Blog">
-<meta name="twitter:description" content="认识世界，认识自己，变更强。">
+<meta name="twitter:title" content="P2P与DHT的简单调研">
+<meta name="twitter:description" content="P2P 与 DHT 的简单调研一、什么是哈希表？哈希表（也叫散列表）是用来存储键值对的一种容器，英文为‘key/value pairs’。它的特点是可以放标快速的根据键(key)来获取值(value)。现实中的一个例子就是手机通信录，你可以根据某个人的名字查询到他的号码。 存储 value 的单元叫做桶(bucket)或者槽(slot)。在一个哈希表中，会包含N个桶，N通常是固定不变的。每个桶都有">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg/630px-Hash_table_3_1_1_0_1_0_0_SP.svg.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://liangnotes.com/archives/2018/"/>
+  <link rel="canonical" href="http://liangnotes.com/2019/01/10/P2P与DHT的简单调研/"/>
 
 
 
@@ -134,7 +141,7 @@
   };
 </script>
 
-  <title>归档 | Liang Peili's Blog</title>
+  <title>P2P与DHT的简单调研 | Liang Peili's Blog</title>
   
 
 
@@ -181,7 +188,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -246,7 +253,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
@@ -318,217 +325,256 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liangnotes.com/2019/01/10/P2P与DHT的简单调研/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梁培利">
+      <meta itemprop="description" content="认识世界，认识自己，变更强。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Liang Peili's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">P2P与DHT的简单调研
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-10 18:05:09 / 修改时间：18:09:17" itemprop="dateCreated datePublished" datetime="2019-01-10T18:05:09+08:00">2019-01-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 24 篇日志。 继续努力。
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/31/我的求学时代/" itemprop="url">
-              
-                <span itemprop="name">我的求学时代</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-31T18:01:46+08:00"
-              content="2018-12-31" >
-          12-31
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/12/进化、农业、城市与语言——《郑也夫的社会学50讲》笔记/" itemprop="url">
-              
-                <span itemprop="name">进化、农业、城市与语言——《郑也夫的社会学50讲》笔记</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-12T10:46:56+08:00"
-              content="2018-12-12" >
-          12-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/28/新司机开车指北/" itemprop="url">
-              
-                <span itemprop="name">新司机开车指北</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-28T14:44:27+08:00"
-              content="2018-10-28" >
-          10-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="P2P-与-DHT-的简单调研"><a href="#P2P-与-DHT-的简单调研" class="headerlink" title="P2P 与 DHT 的简单调研"></a>P2P 与 DHT 的简单调研</h1><h2 id="一、什么是哈希表？"><a href="#一、什么是哈希表？" class="headerlink" title="一、什么是哈希表？"></a>一、什么是哈希表？</h2><p>哈希表（也叫散列表）是用来存储键值对的一种容器，英文为‘key/value pairs’。它的特点是可以放标快速的根据键(key)来获取值(value)。现实中的一个例子就是手机通信录，你可以根据某个人的名字查询到他的号码。</p>
+<p>存储 value 的单元叫做桶(bucket)或者槽(slot)。在一个哈希表中，会包含N个桶，N通常是固定不变的。每个桶都有一个编号(index)，可以编为0~N-1。那如何确定哪条数据存入哪个桶呢？哈希表有一个映射函数f: key -&gt; index。可以根据 key 计算出可以存入的存储位置，这个映射函数也叫做哈希函数。在想要查找某个人的联系方式时，比如<code>John Smith</code>，就可以根据哈希函数计算出他的电话号码存储位置为02，从而快速的找到 value。</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg/630px-Hash_table_3_1_1_0_1_0_0_SP.svg.png" alt="1"></p>
+<p>图1.哈希表</p>
+<p>那有没有这种可能：不同的联系人经过哈希函数运算以后，存储到了相同的位置？这种情况叫做‘碰撞’，是存在的。因此在设计哈希函数时就需要考虑到这种情况，尽量避免。一个好的哈希函数应该满足以下条件：</p>
+<ol>
+<li>计算出的哈希值要足够离散；</li>
+<li>尽可能的降低碰撞；</li>
+<li>桶的数量要足够大；</li>
+</ol>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg/900px-Hash_table_5_0_1_1_1_1_1_LL.svg.png" alt="2"></p>
+<p>图2. 发生碰撞的情况</p>
+<h2 id="二、分布式哈希表"><a href="#二、分布式哈希表" class="headerlink" title="二、分布式哈希表"></a>二、分布式哈希表</h2><p>分布式哈希表全称是 <code>Distributed Hash Table</code>，简称DHT。分布式哈希表和哈希表类似，区别在于传统的哈希表主要用于单机软件，而分布式哈希表则主要用于分布式系统。DHT 的主要作用还是为了提供从 key 到 value 的查询服务。在一个基于DHT的分布式网络里，每个节点都存储着网络上的部分数据以及部分路由。当一份数据想要写入网络时，首先对这份数据做哈希，得到一个唯一的标识符(key)后再存入网络。由于数据是分布式存储的，修改数据也只会引起部分节点的修改，而不是全网的节点同步修改。通过这种方式实现全网的寻址和存储。</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DHT_en.svg/1000px-DHT_en.svg.png" alt="3"></p>
+<p>DHT 只是一个理念，提出了这样的一种网络模型并解释了它对分布式存储的好处，但具体怎么实现并不是DHT的范畴。</p>
+<h2 id="三、P2P-的发展史"><a href="#三、P2P-的发展史" class="headerlink" title="三、P2P 的发展史"></a>三、P2P 的发展史</h2><h3 id="1-第一代P2P技术"><a href="#1-第一代P2P技术" class="headerlink" title="1. 第一代P2P技术"></a>1. 第一代P2P技术</h3><p>第一代P2P技术采用了中央服务器的模式：每个节点在查找文件时，需要首先连接到中央服务器，才能知道自己想要文件的地址。这种模式的缺点在于中央服务器成为整个P2P网络的最大缺点，容易发生单点故障。</p>
+<p>第一代P2P技术的代表是 Napster。</p>
+<h3 id="2-第二代P2P技术"><a href="#2-第二代P2P技术" class="headerlink" title="2. 第二代P2P技术"></a>2. 第二代P2P技术</h3><p>第二代P2P技术采用了广播的模式。当某个节点想要查询某个文件的时候，它会向所有自己看见的节点发送请求进行询问。如果被询问的节点没有这个文件，那么它会继续发起广播。因此这种技术会引起广播风暴，极大的占用网络带宽和节点的系统资源。协议层面虽然可以设置存活时间(Time To Live, TTL)，依然解决不了广播风暴的问题。</p>
+<p><img src="https://lh6.googleusercontent.com/trmBi0r-sOJY0WJ0TjmXaCYgo602BxNc7D5LAA1kSSByWBWMJF2DOBP64XWMe_DDV8WVUvqTSxibnPvpAKJ5oIxMAHeY3gPahp9s2BRNXUDceQzmwrjk0aWEvvx-X6z1iauTFo1X32o" alt="4"></p>
+<p>第二代P2P的典型代表是 Gnutella。</p>
+<h3 id="3-第三代P2P技术"><a href="#3-第三代P2P技术" class="headerlink" title="3. 第三代P2P技术"></a>3. 第三代P2P技术</h3><p>第三代P2P技术就是上面提到过的DHT。它既避免了第一代技术的单点故障，也没有第二代技术的广播风暴。它没有中心，可以存储海量数据。参与DHT的节点每时每刻都有新的节点上线和旧的节点下线，在这种情况下，它依然能够完成数据的高效查询。那么DHT是怎么实现的呢？</p>
+<h4 id="哈希算法的选择"><a href="#哈希算法的选择" class="headerlink" title="哈希算法的选择"></a>哈希算法的选择</h4><p>DHT 通常是直接拿业务数据的哈希值作为 key， 业务数据本身作为 value。由于DHT承载的数据量通常比较大，因为哈希函数的值域就一定要足够大才可以避免碰撞。通常DHT大多采用128bit 以上的哈希值。</p>
+<h4 id="nodeid"><a href="#nodeid" class="headerlink" title="nodeid"></a>nodeid</h4><p>在DHT的分布式系统中存在着多个节点，这样的话一般会给每个节点分配唯一的 nodeid。</p>
+<h4 id="拓扑结构"><a href="#拓扑结构" class="headerlink" title="拓扑结构"></a>拓扑结构</h4><p>DHT 网络需要定义自己的拓扑结构，有了拓扑结构，就需要设计一种路由算法。当某个分布式系统具有自己的拓扑结构，就称之为一个<code>Overlay Network</code>，也就是‘网络之上的网络’，它的数据通信依赖于下层的互联网来实现。</p>
+<p>由于每个节点都有 nodeid，因此在设计拓扑结构和路由算法时，它就可以只需要考虑 nodeid，而不用考虑其下层网络的属性（协议类型、ip、端口等）。</p>
+<h4 id="路由算法"><a href="#路由算法" class="headerlink" title="路由算法"></a>路由算法</h4><p>由于DHT网络中的节点可能非常多并且是动态变化的，因为不可能让每个节点记录网络上所有其他节点的信息。实际情况是：每个节点只知道少数一些节点的信息。因此需要设计一种路由算法，尽可能的利用已知节点来转发数据。路由算法确定好以后，还需要确定路由表的大小。路由表越大，就可以实现越短（跳数越少）的路由。</p>
+<h4 id="距离算法"><a href="#距离算法" class="headerlink" title="距离算法"></a>距离算法</h4><p>某些DHT 系统还会定义一种距离算法，用来计算节点之间的距离等。</p>
+<h4 id="数据保存与提取"><a href="#数据保存与提取" class="headerlink" title="数据保存与提取"></a>数据保存与提取</h4><p>前面说的所有东西，都是为了这两件事（数据的保存与提取）服务的。</p>
+<p>保存数据：<br>当某个节点收到了一份新的数据 value，它会先计算出这份 value 的 key，然后计算自己与这份数据之间的距离，然后再计算它所知道的节点与这个 key 的距离。全部计算完成后，如果发现自己与 key 的距离最小，那么久自己保存。要不就把它转发到自己计算出的最小距离的节点。收到这份数据的节点也做同样的处理。</p>
+<p>提取数据：<br>当某个节点收到查询数据的请求(key)以后，也会计算自己以及自己知道的节点和这个 key 之间的距离。如果计算下来自己最小，然后就在本地查询有无该文件。否则就把这个请求发给最小距离的节点。收到请求的其他节点也会做同样处理。</p>
+<p>2001年诞生了第一批DHT 洗衣，比如Chord、CAN、Tapestry 以及Pastry 等。不过最流行的还是K ademlia，Bittorrent 以及电驴等用的都是Kademlia。</p>
+<p><a href="https://program-think.blogspot.com/2017/09/Introduction-DHT-Kademlia-Chord.html" target="_blank" rel="noopener">聊聊分布式散列表（DHT）的原理——以 Kademlia（Kad） 和 Chord 为例 @ 编程随想的博客</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Hash_table" target="_blank" rel="noopener">Hash table - Wikipedia</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Distributed_hash_table" target="_blank" rel="noopener">Distributed hash table - Wikipedia</a></p>
+<p><a href="https://wenku.baidu.com/view/ee91580216fc700abb68fcae.html" target="_blank" rel="noopener">Kademlia协议原理简介 - 百度文库</a></p>
+<p><a href="https://github.com/ethereum/wiki/wiki/Kademlia-Peer-Selection" target="_blank" rel="noopener">Kademlia Peer Selection · ethereum/wiki Wiki</a></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/14/三里屯的三轮车们/" itemprop="url">
-              
-                <span itemprop="name">三里屯的三轮车们</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-14T11:00:52+08:00"
-              content="2018-03-14" >
-          03-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的打赏会鼓励我继续创作，谢谢！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="梁培利 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpeg" alt="梁培利 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>梁培利</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://liangnotes.com/2019/01/10/P2P与DHT的简单调研/" title="P2P与DHT的简单调研">http://liangnotes.com/2019/01/10/P2P与DHT的简单调研/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/区块链/" rel="tag"><i class="fa fa-tag"></i> 区块链</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/31/我的求学时代/" rel="next" title="我的求学时代">
+                <i class="fa fa-chevron-left"></i> 我的求学时代
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTE0Ny8xNTY3NA=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -549,8 +595,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -626,6 +681,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#P2P-与-DHT-的简单调研"><span class="nav-number">1.</span> <span class="nav-text">P2P 与 DHT 的简单调研</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是哈希表？"><span class="nav-number">1.1.</span> <span class="nav-text">一、什么是哈希表？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、分布式哈希表"><span class="nav-number">1.2.</span> <span class="nav-text">二、分布式哈希表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、P2P-的发展史"><span class="nav-number">1.3.</span> <span class="nav-text">三、P2P 的发展史</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-第一代P2P技术"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 第一代P2P技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-第二代P2P技术"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 第二代P2P技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-第三代P2P技术"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. 第三代P2P技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈希算法的选择"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">哈希算法的选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nodeid"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">nodeid</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓扑结构"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">拓扑结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路由算法"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">路由算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#距离算法"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">距离算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据保存与提取"><span class="nav-number">1.3.3.6.</span> <span class="nav-text">数据保存与提取</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -762,6 +833,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
 
   
 
@@ -774,6 +849,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
