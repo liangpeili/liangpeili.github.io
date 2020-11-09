@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="随笔,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="每天乘地铁上下班，有一天脑子里突然蹦出了一个点子：每天乘地铁的过程，多么适合做成一款跑酷游戏啊！说干就干，游戏的大概流程已经想好。可惜后来时间精力完全分不出来，就把想法贡献出来，谁愿意拿走就拿走吧。  游戏名字《换乘大作战》基于不同交通工具的换乘场景，比如地铁、公交、火车、飞机等。偶尔推出一个极难的副本，比如乡村大冒险。 人物属性：体力值、运气值。体力值积攒完毕可以爆打堵住电梯快速通道的行人，运">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一款跑酷游戏的设想">
+<meta property="og:url" content="http://liangnotes.com/2017/02/16/一款跑酷游戏的设想/index.html">
+<meta property="og:site_name" content="梁培利的博客">
+<meta property="og:description" content="每天乘地铁上下班，有一天脑子里突然蹦出了一个点子：每天乘地铁的过程，多么适合做成一款跑酷游戏啊！说干就干，游戏的大概流程已经想好。可惜后来时间精力完全分不出来，就把想法贡献出来，谁愿意拿走就拿走吧。  游戏名字《换乘大作战》基于不同交通工具的换乘场景，比如地铁、公交、火车、飞机等。偶尔推出一个极难的副本，比如乡村大冒险。 人物属性：体力值、运气值。体力值积攒完毕可以爆打堵住电梯快速通道的行人，运">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-11-09T08:26:22.774Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一款跑酷游戏的设想">
+<meta name="twitter:description" content="每天乘地铁上下班，有一天脑子里突然蹦出了一个点子：每天乘地铁的过程，多么适合做成一款跑酷游戏啊！说干就干，游戏的大概流程已经想好。可惜后来时间精力完全分不出来，就把想法贡献出来，谁愿意拿走就拿走吧。  游戏名字《换乘大作战》基于不同交通工具的换乘场景，比如地铁、公交、火车、飞机等。偶尔推出一个极难的副本，比如乡村大冒险。 人物属性：体力值、运气值。体力值积攒完毕可以爆打堵住电梯快速通道的行人，运">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liangnotes.com/2017/02/16/一款跑酷游戏的设想/">
+
+
+
+
+
+  <title>一款跑酷游戏的设想 | 梁培利的博客</title>
+  
+
+
+
+
+
+
+
+
+<link rel="alternate" href="/atom.xml" title="梁培利的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">梁培利的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">在人烟稀少的地方疯狂撒欢</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-timeline">
+          <a href="/timeline/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            时间线
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liangnotes.com/2017/02/16/一款跑酷游戏的设想/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梁培利">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://i.v2ex.co/TlE29D6M.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梁培利的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">一款跑酷游戏的设想</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-16T17:01:46+08:00">
+                2017-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>每天乘地铁上下班，有一天脑子里突然蹦出了一个点子：每天乘地铁的过程，多么适合做成一款跑酷游戏啊！说干就干，游戏的大概流程已经想好。可惜后来时间精力完全分不出来，就把想法贡献出来，谁愿意拿走就拿走吧。</p>
+</blockquote>
+<h3 id="游戏名字《换乘大作战》"><a href="#游戏名字《换乘大作战》" class="headerlink" title="游戏名字《换乘大作战》"></a>游戏名字《换乘大作战》</h3><p>基于不同交通工具的换乘场景，比如地铁、公交、火车、飞机等。偶尔推出一个极难的副本，比如乡村大冒险。</p>
+<h3 id="人物属性："><a href="#人物属性：" class="headerlink" title="人物属性："></a>人物属性：</h3><p>体力值、运气值。体力值积攒完毕可以爆打堵住电梯快速通道的行人，运气值积攒完毕可以大爆发，忽视障碍物快速通过过道。</p>
+<p>前期先实现地铁换乘场景</p>
+<p>地铁换乘场景分为下车冲刺、抢夺电梯、过道行人躲避、上车位置争夺等四个场景（场景名字再讨论），中间随机插入警察叔叔检查身份证。四个场景完毕，一个周期结束，下一周期提升难度，周而复始。</p>
+<h3 id="场景划分："><a href="#场景划分：" class="headerlink" title="场景划分："></a>场景划分：</h3><h4 id="下车冲刺："><a href="#下车冲刺：" class="headerlink" title="下车冲刺："></a>下车冲刺：</h4><p>此场景不是单人跑酷模式，为多人抢夺有利位置。该场景决定玩家最后是否到达电梯的有利位置。</p>
+<h4 id="电梯步梯："><a href="#电梯步梯：" class="headerlink" title="电梯步梯："></a>电梯步梯：</h4><p>上个场景决定玩家走到步梯还是电梯前<br>电梯场景：电梯为双过道，右侧行人静止不动，左侧为快速通道，有时快速通道的人也不动，此时可选择是否提醒他。提醒他有一定几率被打或充耳不闻的情况出现，此时玩家被堵住不动。电梯可直接击打单独行人，如果一堆人则需要耗费体力值。<br>步梯场景，步梯特点是较慢并消费体力，但是不会出现堵住不动的情况。</p>
+<h4 id="过道行人躲避："><a href="#过道行人躲避：" class="headerlink" title="过道行人躲避："></a>过道行人躲避：</h4><p>障碍物：弯曲的道路、盯着手机慢慢走的行人、拉着行李箱的旅客、打电话的行人等。<br>规则：玩家需要躲避障碍物，尽快通过换乘通道。</p>
+<p>过道行人躲避场景和电梯步梯场景可以多个、顺序更换，更贴近现实。</p>
+<h4 id="上车位置争夺："><a href="#上车位置争夺：" class="headerlink" title="上车位置争夺："></a>上车位置争夺：</h4><p>玩家结束上两个场景，此时进入排队等车模式。玩家在队伍中的位置随机。靠前的部分可以抢到座位，后面的位置需要运用技巧才能抢到座位。</p>
+<p>此时一个周期结束，玩家到达下一个目的地，开启新的周期。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/03/北京租房志/" rel="next" title="北京租房志">
+                <i class="fa fa-chevron-left"></i> 北京租房志
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/16/《悟空归来》——另一个故事/" rel="prev" title="《悟空归来》——另一个故事">
+                《悟空归来》——另一个故事 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://i.v2ex.co/TlE29D6M.jpeg" alt="梁培利">
+            
+              <p class="site-author-name" itemprop="name">梁培利</p>
+              <p class="site-description motion-element" itemprop="description">认识世界，认识自己，变更强。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏名字《换乘大作战》"><span class="nav-number">1.</span> <span class="nav-text">游戏名字《换乘大作战》</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#人物属性："><span class="nav-number">2.</span> <span class="nav-text">人物属性：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#场景划分："><span class="nav-number">3.</span> <span class="nav-text">场景划分：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下车冲刺："><span class="nav-number">3.1.</span> <span class="nav-text">下车冲刺：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#电梯步梯："><span class="nav-number">3.2.</span> <span class="nav-text">电梯步梯：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过道行人躲避："><span class="nav-number">3.3.</span> <span class="nav-text">过道行人躲避：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上车位置争夺："><span class="nav-number">3.4.</span> <span class="nav-text">上车位置争夺：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">版权所有@梁培利</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
