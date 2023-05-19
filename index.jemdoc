@@ -3,32 +3,16 @@
 
 ~~~
 {}{img_left}{photos/bio.jpg}{avatar}{131}{160}
-PhD,\n [https://qkl.cuit.edu.cn/ 区块链产业学院], \n[https://www.cuit.edu.cn/ 成都信息工程大学]\n
+讲师 在读博士,\n 区块链工程专业,
+\n [https://qkl.cuit.edu.cn/ 区块链产业学院], \n[https://www.cuit.edu.cn/ 成都信息工程大学]\n
 学府路一段24号 \n
 四川省成都市 \n 
 E-mail: [liangpl@cuit.edu.cn]
 ~~~
 
-== About me
-I received the B.S. and M.Sc. degrees in computer engineering from Iran University of Science and Technology ([http://www.iust.ac.ir IUST]), and the [http://ece.ut.ac.ir/ University of Tehran], Iran, in 2005 and 2008, respectively. In April 2015, I received the PhD degree in Telecommunications under the supervision of 
- [http://www.people.kth.se/~mikaelj/ Prof. Mikael Johansson] and  [http://www.people.kth.se/~carlofi/ Prof. Carlo Fischione] at [http:www.kth.se KTH].  
+== 关于我
+西南科技大学博士在读。2013年硕士毕业于北京邮电大学，2010年本科毕业于中国石油大学(华东)。曾任英国GNY Technologies LLC 区块链技术总监；主要基于JavaScript开发一条通用的平台型公链 GNY；集成机器学习算法到GNY平台，带领团队开发出预测新冠确诊人数的产品，并被美国媒体Forbes报道；开发出Swapgate，打通 GNY 与Ethereum 以及 Binance Smart Chain的资产互通；曾是阿希链(Asch)的核心开发工程师（2016年—2018年），率先开发出公链与比特币互通的跨链协议，打通比特币与阿希链之间的资产互通；底层性能优化，提高分布式节点之间的区块同步效率。主要作品有《区块链开发实战——基于JavaScript的DApp开发》（2019年， 机械工业出版社）、《走进信息科技》（2020年，内蒙古通信学会）等。
 
-== Research
-My research interests include 
-- Convex Optimisation  
-- Distributed Algorithms
-- Real-time Sensor Networking
-- Wireless Networks
-- Machine Learning
-
-[research.html Find out more].
-=== Recent Publications 
-. E. Ghadimi, H. R. Feyzmahdavian, and M. Johansson, \"Global convergence of the heavy-ball method for convex optimization\",  In ECC'15: European Control Conference, 2015.
-. E. Ghadimi, A. Teixeira, I. Shames, and M. Johansson \" Optimal parameter selection for the alternating direction method of
-multipliers (ADMM): quadratic problems \", IEEE Transactions on Automatic Control, 2015. \[[http://arxiv.org/abs/1306.2454 arxiv]\]
-. E. Ghadimi, A. Teixeira, M. Rabbat, and M. Johansson, \"The ADMM algorithm for distributed averaging: Convergence rates and optimal parameter selection\", In Proceedings of the 48th Asilomar Conference on Signals, Systems and Computers, 2014. \[[https://www.dropbox.com/s/k9izxz1m39yvvuz/admm_distributed_aveg.pdf?dl=0 pdf] \]
-. E. Ghadimi, O. Landsiedel, P. Soldati, S. Duquennoy, and M. Johansson, \"Opportunistic Routing in Low Duty-Cycle Wireless Sensor Networks\", ACM Transactions on Senor Networks, 2014. \[[pub/oppTOSN.pdf pdf]\]
-
-[publications.html Full list of publications].
-\n
-[cv.pdf A brief cv].
+== 开展课程
+2023年春季学期，《区块链金融》课程，32学时；
+2023年春季学期，《区块链应用系统开发实践》，32学期；
